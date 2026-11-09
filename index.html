@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observatório do Café</title>
+<meta name="description" content="Pesquisa da Embrapa sobre café arábica e canéfora: publicações, projetos e soluções tecnológicas, por espécie, tema, território e participação de mulheres.">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header class="topo">
+  <div class="topo-in">
+    <div>
+      <h1>Observatório do Café</h1>
+      <p class="sub">Pesquisa da Embrapa sobre café arábica e canéfora</p>
+    </div>
+    <nav id="abas" aria-label="Seções">
+      <button data-aba="visao" class="ativa">Visão geral</button>
+      <button data-aba="acervo">Acervo</button>
+      <button data-aba="genero">Mulheres na pesquisa</button>
+      <button data-aba="metodo">Método</button>
+    </nav>
+  </div>
+</header>
+
+<section class="filtros" id="filtros" aria-label="Filtros">
+  <div class="filtros-in">
+    <label>Espécie
+      <select id="f-esp">
+        <option value="">Todas</option>
+        <option value="A">Arábica</option>
+        <option value="C">Canéfora</option>
+        <option value="M">As duas</option>
+        <option value="N">Não especificada</option>
+      </select>
+    </label>
+    <label class="chk"><input type="checkbox" id="f-inf" checked> incluir espécie inferida</label>
+    <label>Tipo
+      <select id="f-tipo">
+        <option value="">Todos</option>
+        <option value="p">Publicações</option>
+        <option value="j">Projetos</option>
+        <option value="s">Soluções tecnológicas</option>
+      </select>
+    </label>
+    <label>Tema <select id="f-tema"><option value="">Todos</option></select></label>
+    <label>Estado <select id="f-uf"><option value="">Todos</option></select></label>
+    <label>Período
+      <span class="periodo"><input type="number" id="f-ano0" inputmode="numeric" aria-label="Ano inicial"> –
+      <input type="number" id="f-ano1" inputmode="numeric" aria-label="Ano final"></span>
+    </label>
+    <button id="f-limpar" class="sec">Limpar</button>
+  </div>
+</section>
+
+<main>
+  <section id="visao" class="aba ativa"></section>
+  <section id="acervo" class="aba"></section>
+  <section id="genero" class="aba"></section>
+  <section id="metodo" class="aba"></section>
+</main>
+
+<footer class="rodape" id="rodape"></footer>
+
+<script src="data/resumo.js?v=1"></script>
+<script src="data/docs.js?v=1"></script>
+<script src="data/similares.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
